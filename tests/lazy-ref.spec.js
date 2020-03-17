@@ -202,4 +202,20 @@ describe('lazy ref', () => {
 			}, 1000);
 		});
 	});
+	it('multiple lazy refs', async done => {
+		const wrapper = mount({
+			template: `
+					<div>
+						<custom-comp v-lazy-ref="'test'" ref="test" />
+						<div v-lazy-ref="'test2'" ref="test2" />
+					</div>
+				`,
+			components: {
+				CustomComp
+			}
+		});
+		expect(await wrapper.vm.$getLazyRefs('test')).toBe(wrapper.vm.$refs['test']);
+		expect(await wrapper.vm.$getLazyRefs('test2')).toBe(wrapper.vm.$refs['test2']);
+		done();
+	});
 });
