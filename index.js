@@ -1,5 +1,5 @@
-import vLazyRefDirective from './src/directives';
-import vLazyRefMixin from './src/mixins';
+import vLazyRefDirective from './src/directives/index';
+import vLazyRefMixin from './src/mixins/index';
 
 // this.$lazyRefs["ddd"]
 const vLazyRefPlugin = {
