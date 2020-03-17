@@ -1,17 +1,29 @@
 {
 	"name": "vue-lazy-ref",
-	"version": "0.1.1",
-	"description": "",
+	"version": "0.1.2",
+	"description": "Easy to get ref even if the element present in async",
 	"main": "dist/vue-lazy-ref.cjs.js",
 	"module": "dist/vue-lazy-ref.es.js",
 	"scripts": {
 		"test": "NODE_ENV=test jest",
 		"build": "rollup -c rollup.config.js",
 		"docs:dev": "vuepress dev docs",
-		"docs:build": "vuepress build docs"
+		"docs:build": "vuepress build docs",
+		"release": "standard-version"
 	},
-	"keywords": [],
-	"author": "",
+	"keywords": [
+		"vue",
+		"vuejs",
+		"vuejs2"
+	],
+	"author": {
+		"name": "Red Huang",
+		"email": "gcaaa31928@gmail.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/gcaaa31928/vue-lazy-ref"
+	},
 	"license": "MIT",
 	"devDependencies": {
 		"@babel/cli": "^7.8.4",
@@ -26,6 +38,7 @@
 		"rollup": "^2.0.6",
 		"rollup-plugin-babel": "^4.4.0",
 		"rollup-plugin-terser": "^5.3.0",
+		"standard-version": "^7.1.0",
 		"vue": "^2.6.11",
 		"vue-jest": "^3.0.5",
 		"vue-template-compiler": "^2.6.11",
